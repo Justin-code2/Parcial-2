@@ -26,6 +26,31 @@ namespace Project.API.Data
             modelBuilder.Entity<Participant>().HasIndex(c => c.NameParti).IsUnique();
             modelBuilder.Entity<Plan>().HasIndex(c => c.NamePro).IsUnique();
             modelBuilder.Entity<Team>().HasIndex(c => c.NameTe).IsUnique();
+
+            //modelBuilder.Entity<Team>()
+            //    .HasOne(t => t.Hack)
+            //    .WithMany(h => h.Teams)
+            //    .HasForeignKey(t => t.HackId)
+            //    .OnDelete(DeleteBehavior.Restrict);
+
+
+            //modelBuilder.Entity<Team>()
+            //    .HasOne(t => t.Plan)
+            //    .WithOne(p => p.Team)
+            //    .HasForeignKey<Plan>(p => p.TeamId);
+
+
+        //    modelBuilder.Entity<Plan>()
+        //        .HasOne(p => p.Team)
+        //        .WithOne(t => t.Plan)
+        //.       HasForeignKey<Plan>(p => p.TeamId)
+        //        .OnDelete(DeleteBehavior.Restrict);
+
+        //    modelBuilder.Entity<Evaluation>()
+        //        .HasOne(e => e.Plan)
+        //        .WithMany(p => p.Evaluations)
+        //        .HasForeignKey(e => e.PlanId)
+        //        .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }

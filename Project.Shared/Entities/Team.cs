@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace Project.Shared.Entities
 {
@@ -25,6 +26,30 @@ namespace Project.Shared.Entities
         [MaxLength(200, ErrorMessage = "The {0} field can not have more than {1} characters.")]
         [Required(ErrorMessage = "The field {0} is mandatory.")]
         public string RoleTeam { get; set; }
+
+
+        //[JsonIgnore]
+        //public int HackId { get; set; }  // Clave foránea
+        //public Hack Hack { get; set; }  // Propiedad de navegación
+
+        
+        //[JsonIgnore]
+        //// Relación uno-a-muchos: un Equipo tiene varios Participantes
+        //public ICollection<Participant> Participants { get; set; }
+
+
+        //[JsonIgnore]
+        //// Clave foránea para Mentor
+        //public int MentorId { get; set; }  // Clave foránea
+        //public Mentor Mentor { get; set; }  // Propiedad de navegación
+
+
+        //// Clave foránea para Proyecto (uno-a-uno)
+        //public int PlanId { get; set; }  // Clave foránea
+        //public Plan Plan { get; set; }  // Propiedad de navegación
+
+
+
 
     }
 }

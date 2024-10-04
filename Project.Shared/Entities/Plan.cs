@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace Project.Shared.Entities
 {
@@ -26,8 +27,23 @@ namespace Project.Shared.Entities
         [Required(ErrorMessage = "The field {0} is mandatory.")]
         public string DateEnd { get; set; }
 
-        //equipo que lo desarrollo -- entidad Team
-        //mentor asignado -- entidad Mentor
+
+
+        //[JsonIgnore]
+        //// Clave foránea para Mentor
+        //public int MentorId { get; set; }  // Clave foránea
+        //public Mentor Mentor { get; set; }  // Propiedad de navegación
+
+
+        //[JsonIgnore]
+        //// Clave foránea para Team (uno-a-uno)
+        //public int TeamId { get; set; }  // Clave foránea
+        //public Team Team { get; set; }  // Propiedad de navegación
+
+
+        //[JsonIgnore]
+        //// Relación uno-a-muchos: un Proyecto tiene varias Evaluaciones
+        //public ICollection<Evaluation> Evaluations { get; set; }
 
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace Project.Shared.Entities
 {
@@ -21,8 +22,10 @@ namespace Project.Shared.Entities
         [Required(ErrorMessage = "The field {0} is mandatory.")]
         public string ExperienceParti { get; set; }
 
-        //equipo al que pertenece -- entidad Team
-
+        
+        //[JsonIgnore]
+        //public int TeamId { get; set; }  // Clave foránea
+        //public Team Team { get; set; }  // Propiedad de navegación
 
 
     }

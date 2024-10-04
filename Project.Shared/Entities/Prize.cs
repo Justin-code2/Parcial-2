@@ -11,8 +11,15 @@ namespace Project.Shared.Entities
         [Required(ErrorMessage = "The field {0} is mandatory.")]
         public string DescripPriz { get; set; }
 
-        //equipo ganador -- entidad Team
-        //hackatón relacionado -- entidad Hack
+
+
+        //// Clave foránea para Hackathon
+        //public int HackId { get; set; }  // Clave foránea
+        //public Hack Hack { get; set; }  // Propiedad de navegación
+
+        //// Clave foránea para Team (equipo ganador)
+        //public int TeamId { get; set; }  // Clave foránea
+        //public Team Team { get; set; }  // Propiedad de navegación
 
     }
 }
